@@ -1,0 +1,16 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: v0.0.3
+_src_path: https://github.com/delapazruiz/fairRcode.git
+authors: 'Iowner: Aris Suwondoo'
+citation: false
+code_of_conduct: true
+community: false
+contact_email: aris.suwondo@bmkg.go.id
+copyright_holder: 'Iowner: Aris Suwondo'
+copyright_year: 2026
+owner: 'Iowner: Aris Suwondo'
+software_license: MIT License
+software_name: SACA&D Harmonization
+software_purpose: The purpose of SACA&D Harmonization is make a quality check and
+    provenance Precipitation and Temperature data in Southeast Asia CLimate Assessment
+    & Dataset
