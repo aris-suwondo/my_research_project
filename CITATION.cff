@@ -1,0 +1,24 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Research software aris
+message: Please cite this if you use this code
+type: software
+authors:
+  - given-names: Aris
+    family-names: Suwondo
+    name-particle: Aris
+    email: aris.suwondo@utwente.nl
+    affiliation: 'GSC-ITC, University of Twente'
+repository-code: 'https://github.com/aris-suwondo/my_research_project.git'
+abstract: >-
+  This is the repository for research software management
+  training
+keywords:
+  - research management
+  - r
+license: CC-BY-4.0
+commit: eb0fbb7dbd491471c4aeaa57fe2f432c639764b0
+version: '0.00'
+date-released: '2026-11-11'
