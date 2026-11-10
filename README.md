@@ -4,7 +4,6 @@
 <div align="center">
   <img src="img/UT_Logo_0072_Black_EN.png" alt="logo">
 </div>
-<a href="https://doi.org/10.5281/zenodo.24104163"><img src="https://zenodo.org/badge/1451252445.svg" alt="DOI"></a>
 
 A template to comply with the [University of Twente Research Software Guidelines](https://zenodo.org/records/15807424) for making your software project FAIR.
 
