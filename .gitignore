@@ -4,3 +4,6 @@
 /data/processed/cleaned_penguins_modular.csv
 # Generated regression report from the modular analysis
 /outputs/reports/regression_results_modular.txt
+# Generated figures from the modular visualization script
+/outputs/figures/fig-01-penguin-regression-modular.png
+/outputs/figures/fig-01-penguin-regression-modular.pdf
