@@ -159,6 +159,220 @@ Exact package-version management using `renv` is planned as the next development
 - R packages: `palmerpenguins`, `ggplot2`, and `dplyr`.
 - Hardware: No specialized hardware is expected to be necessary for this small example analysis.
 
+## Software Management Plan
+
+This Software Management Plan (SMP) explains how research software can be developed, documented, shared, and maintained. I use the Palmer Penguins project as an example while learning Research Software Management at the University of Twente. The same practices can be adapted to other research projects depending on their needs.
+
+### 1. Software Description and Intended Users
+
+**Question:** Please provide a brief description of your software, stating its purpose and intended user community.
+
+**Answer:**
+
+This project uses R to analyze the Palmer Penguins dataset. The analysis examines the relationship between penguin bill length and body mass using linear regression.
+
+The software is mainly intended for students and researchers who want to learn reproducible data analysis and research software management.
+
+I use an existing R script provided during the training. Instead of developing a new statistical method, I focus on organizing the code, managing dependencies, writing documentation, and testing the analysis.
+
+### 2. Version Control
+
+**Question:** Which version control system will you use to manage your source code?
+
+**Answer:**
+
+I use Git to manage changes in the source code and documentation. Git helps me track what has changed and return to previous versions when needed.
+
+I use GitHub to store and share the repository online.
+
+The repository is available at:
+
+https://github.com/aris-suwondo/my_research_project
+
+Changes are recorded using Git commits and pushed to GitHub.
+
+### 3. Public Availability
+
+**Question:** How will you make your software publicly available? Please provide links to the software if this is already the case.
+
+**Answer:**
+
+The software is publicly available on GitHub:
+
+[Palmer Penguins Regression Analysis Repository](https://github.com/aris-suwondo/my_research_project)
+
+Other users can access the R scripts, documentation, and example outputs. They can also clone the repository to run the analysis on their own computers.
+
+For long-term preservation, I plan to archive a stable version of the software in Zenodo.
+
+The repository already includes a Zenodo DOI badge, but I still need to check whether it points to the correct software release.
+
+### 4. Software License
+
+**Question:** What licence will your software have?
+
+**Answer:**
+
+The MIT License is intended for the original code developed in this repository. It allows other users to reuse, modify, and share the software under its license conditions.
+
+The repository already contains an MIT LICENSE file. However, some documentation still refers to CC-BY-4.0, so I need to make the license information consistent.
+
+I also need to check the license and attribution requirements of the original training script and the University of Twente software template.
+
+For other research projects, the license should be selected based on the software's purpose and the licenses of any reused code.
+
+### 5. Software Sustainability During the Project
+
+**Question:** What measures will be taken during the project to ensure the long-term sustainability of the software developed in the project? (max. 300 words)
+
+**Answer:**
+
+To make research software easier to maintain and reuse, several practices should be applied during development.
+
+First, I use Git to record changes in the code. I also keep documentation so other users can understand the workflow.
+
+The code should be divided into smaller modules to make debugging and testing easier. Software dependencies and their versions should also be recorded.
+
+For R projects, I plan to use `renv` to manage package dependencies. I will also introduce automated tests to check that the analysis works correctly.
+
+For the Palmer Penguins project, I have already tested the original R script and documented how to run it. The next steps are to organize the code into smaller scripts, manage dependencies with `renv`, and add basic tests.
+
+### 6. Software Support After Project Completion
+
+**Question:** What measures will be taken to support the software after completion of the project? (max. 300 words)
+
+**Answer:**
+
+After a research project is completed, the software should remain accessible to other users when possible.
+
+Documentation and installation instructions should be kept available. Users should also have a way to report errors or suggest improvements.
+
+For the Palmer Penguins project, I plan to use GitHub Issues for reporting problems. I will remain responsible for the repository, but I cannot guarantee regular maintenance after the training.
+
+I also plan to preserve a stable version of the software in Zenodo.
+
+For larger research projects, maintenance may require support from a research team, institution, or Research Software Engineer.
+
+### 7. Resources for Long-Term Usability and Availability
+
+**Question:** What resources are needed to ensure the long-term usability and availability of the software, and how will these resources be funded or obtained? (max. 300 words)
+
+**Answer:**
+
+Research software needs computing resources, storage, software dependencies, and people who can maintain it. The required resources depend on the size and complexity of the project.
+
+For instance, the Palmer Penguins project only requires a personal computer, R, and several R packages. I use GitHub to store the code and documentation. These tools are freely available, and the project does not have dedicated funding.
+
+More complex research projects may need database servers, larger storage, computing infrastructure, and technical support.
+
+These resources can be provided through existing institutional facilities, research funding, or collaboration with other organizations.
+
+The resource requirements should be reviewed during the project, especially when the software becomes more complex or is used by more people.
+
+### 8. Additional Measures to Promote Software Longevity
+
+**Question:** Are there other measures that will be taken to promote the software's longevity? (max. 300 words)
+
+**Answer:**
+
+Software can remain useful for a longer time if it is easy to find, understand, and reuse.
+
+Clear documentation and examples can help new users learn how the software works. Sharing the code publicly also allows other researchers to use or improve it.
+
+Another important step is to make the software reusable in other research projects. This is easier when the code is organized into smaller modules.
+
+For the Palmer Penguins project, I want to use the repository as an example of good research software management practices.
+
+The experience gained from this project will help me organize and manage software in my other research projects, such as SACA&D and the Honduras heatwave analysis.
+
+### 9. Software Documentation
+
+**Question:** How will your software be documented? Please provide a link to the documentation, if available.
+
+**Answer:**
+
+Software documentation should explain what the software does, how to install it, and how to run it. It should also help other developers understand the code.
+
+For the Palmer Penguins project, I use the main README to describe the project and provide installation instructions.
+
+The repository also contains documentation in different folders, including:
+
+[Code documentation](code/README.md)
+
+I plan to update these documents as the project develops. I will also add comments to the R scripts to explain important steps in the analysis.
+
+The documentation should be simple enough for new users to follow, while also providing the information needed to reproduce the results.
+
+### 10. Installation Requirements
+
+**Question:** How will your software document its installation requirements? Please provide a link to the installation documentation, if available.
+
+**Answer:**
+
+Installation instructions should explain the software requirements, dependencies, and steps needed to run the software.
+
+For the Palmer Penguins project, I have added installation instructions to the main README.
+
+[Installation Instructions](#installation)
+
+The instructions explain how to install the required R packages, clone the GitHub repository, and run the analysis.
+
+I have tested the installation and analysis on my Windows laptop using R 4.5.1.
+
+I also plan to use `renv` to record package versions so other users can restore the R environment more easily.
+
+### 11. Software Citation
+
+**Question:** How will you enable citation of your software by users? Please provide a link to software citation data and/or DOI if available.
+
+**Answer:**
+
+Software citation is important because it gives credit to the developers and helps other researchers find the software.
+
+I plan to use a `CITATION.cff` file to provide information such as the software title, author, version, and repository.
+
+The Palmer Penguins repository already contains a citation file:
+
+[CITATION.cff](CITATION.cff)
+
+I still need to check the citation information and the Zenodo DOI before using them for a software release.
+
+For other research projects, I would use a similar approach to make the software easier to cite.
+
+### 12. Software Testing
+
+**Question:** How will your software be tested? Please provide a link to automated testing results, if available.
+
+**Answer:**
+
+Software testing is needed to check whether the code works correctly and produces the expected results.
+
+For the Palmer Penguins project, I have successfully run the original R analysis script. It produced processed data, regression results, and figures.
+
+However, automated testing has not been implemented yet.
+
+I plan to add basic tests using the R package `testthat`. These tests will check data processing and selected analysis results.
+
+I also plan to compare the outputs from the modular scripts with the original analysis to make sure the results remain consistent.
+
+### 13. Software Packaging and Distribution
+
+**Question:** How will your software be packaged and distributed? Please provide a link to available packaging information (e.g. entry in a packaging registry, if available).
+
+**Answer:**
+
+Software packaging and distribution depend on the type and purpose of the software.
+
+For the Palmer Penguins project, the code is shared directly through GitHub. Users can clone or download the repository and follow the instructions in the README.
+
+The project currently consists of R scripts and is not distributed as an R package.
+
+For this small project, a GitHub repository is sufficient for sharing the code.
+
+If the software becomes more complex or is intended for wider use, I may consider creating an R package or using another suitable distribution method.
+
+Stable versions may also be shared through GitHub releases and archived in Zenodo.
+
 ## License
 This software is distributed under a [CC-BY](LICENSE). 
 
