@@ -63,11 +63,101 @@ project-root/
 
 ## Installation
 
-[Describe the steps that users (not developers) should follow to install the code in each of the intended platforms (e.g. Window 10, MacOS, etc.).]
+This project was tested on Windows using R version 4.5.1 and Git Bash.
 
-**Requirements** 
-- [List the software, OS, and/or technologies on which the code depends, and add hyperlinks to the sources whenever possible.]
-- [State any relevant hardware requirements.]
+The following instructions describe how to install the required R packages and reproduce the Palmer Penguins analysis.
+
+### 1. Software Requirements
+
+The following software is required:
+
+- [R](https://www.r-project.org/) — Tested with version 4.5.1.
+- [Git](https://git-scm.com/) — For version control and cloning the repository.
+- [Visual Studio Code](https://code.visualstudio.com/) — Recommended development environment (optional).
+
+The analysis requires three R packages:
+
+- `palmerpenguins` — Provides the penguin dataset.
+- `ggplot2` — Generates the visualization.
+- `dplyr` — Performs data processing.
+
+### 2. Clone the Repository
+
+Open Git Bash and run:
+
+```bash
+git clone https://github.com/aris-suwondo/my_research_project.git
+cd my_research_project
+```
+
+If the repository has already been cloned, navigate to the existing project directory instead.
+
+### 3. Verify the R Installation
+
+Check whether Rscript is accessible:
+
+```bash
+Rscript --version
+```
+
+If R is installed but Git Bash cannot find Rscript, configure the PATH environment variable.
+
+For example, on Windows with R 4.5.1 installed in the default directory:
+
+```bash
+export PATH="/c/Program Files/R/R-4.5.1/bin:$PATH"
+```
+
+This PATH modification applies only to the current Git Bash session. Adjust the path if R is installed elsewhere.
+
+### 4. Install Required R Packages
+
+Run the following command:
+
+```bash
+Rscript -e 'install.packages(c("palmerpenguins", "ggplot2", "dplyr"), repos="https://cloud.r-project.org")'
+```
+
+### 5. Run the Analysis
+
+From the repository root directory, execute:
+
+```bash
+Rscript code/00_sample_analysis.R
+```
+
+The script performs data preprocessing, linear regression, and visualization.
+
+### 6. Expected Outputs
+
+After successful execution, the following files should be generated:
+
+```text
+data/processed/
+└── cleaned_penguins.csv
+
+outputs/
+├── figures/
+│   ├── fig-01-penguin-regression.png
+│   └── fig-01-penguin-regression.pdf
+└── reports/
+    └── regression_results.txt
+```
+
+These outputs were successfully generated during the initial testing on Windows using R 4.5.1.
+
+### 7. Reproducibility Status
+
+The analysis has been successfully executed on the development machine.
+
+Exact package-version management using `renv` is planned as the next development step. Reproduction on an independent machine or operating system has not yet been verified.
+
+## Requirements
+
+- Operating system: Tested on Windows.
+- R: Version 4.5.1 used during initial testing.
+- R packages: `palmerpenguins`, `ggplot2`, and `dplyr`.
+- Hardware: No specialized hardware is expected to be necessary for this small example analysis.
 
 ## License
 This software is distributed under a [CC-BY](LICENSE). 
