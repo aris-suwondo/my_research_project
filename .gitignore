@@ -2,3 +2,5 @@
 /data/raw/penguins_raw.csv
 # Generated data from the preprocessing script
 /data/processed/cleaned_penguins_modular.csv
+# Generated regression report from the modular analysis
+/outputs/reports/regression_results_modular.txt
