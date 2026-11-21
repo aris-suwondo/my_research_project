@@ -1,2 +1,4 @@
 # Generated data from the Palmer Penguins import script
 /data/raw/penguins_raw.csv
+# Generated data from the preprocessing script
+/data/processed/cleaned_penguins_modular.csv
