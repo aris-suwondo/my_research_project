@@ -1,13 +1,40 @@
 [![DOI](https://zenodo.org/badge/1451252445.svg)](https://doi.org/10.5281/zenodo.24104163)
-# R Research Software Template
+# Palmer Penguins Regression Analysis
 
 <div align="center">
   <img src="img/UT_Logo_0072_Black_EN.png" alt="logo">
 </div>
 
-A template to comply with the [University of Twente Research Software Guidelines](https://zenodo.org/records/15807424) for making your software project FAIR.
+## Project Overview
 
-To align with FAIR4RS (Findable, Accessible, Interoperable, Reusable for Research Software) and Dutch Open Science standards (supported by institutions like NWO and eScience Center), your R project should be treated as a research software package. 
+This repository contains an R-based analysis of the Palmer Penguins
+dataset, developed as part of the Research Software Management training
+at the University of Twente.
+
+The analysis investigates the relationship between penguin bill length
+and body mass using simple linear regression.
+
+The analysis workflow includes:
+
+1. Loading the Palmer Penguins dataset.
+2. Preprocessing the data by removing missing observations.
+3. Performing statistical analysis using linear regression.
+4. Generating a regression plot.
+5. Exporting processed data, figures, and statistical reports.
+
+The project aims to demonstrate reproducible research software practices,
+including version control, dependency management, documentation,
+software testing, and software citation.
+
+### Template Acknowledgement
+
+This project uses the University of Twente Research Software Template
+and follows the recommendations of the
+[University of Twente Research Software Guidelines](https://zenodo.org/records/15807424).
+
+The repository is being progressively improved to align with FAIR4RS
+(Findable, Accessible, Interoperable, and Reusable for Research Software)
+principles.
 
 ## Folder Structure
 
