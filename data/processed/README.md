@@ -13,7 +13,7 @@ This folder contains data that has been cleaned, transformed, or aggregated for 
 
 | Processed File | Source Script | Description of Transformation |
 | :--- | :--- | :--- |
-| `clean_survey.csv` | `code/01_cleaning.R` | Handles missing values, renames columns to snake_case. |
+| `cleaned_penguins_modular.csv` | `code/02_preprocessing.R` | Removes observations with missing bill length or body mass values. |
 | `aggregated_metrics.rds` | `code/02_analysis.R` | Calculated means and SDs grouped by category. |
 
 ---
@@ -32,5 +32,5 @@ To maintain **FAIR Interoperability**, data in this folder follows these standar
 *   **Temporary Files:** Cache files or intermediate joins should be excluded via `.gitignore`.
 
 ---
-*Maintained by: [Your Name/ORCID]*  
+*Maintained by: Aris Suwondo*
 *Part of the FAIR4RS Workflow for Open Science.*

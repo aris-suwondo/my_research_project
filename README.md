@@ -54,9 +54,9 @@ project-root/
 ├── docs/                   # Documentation (e.g., Quarto website)
 ├── .github/                # GitHub Actions for CI/CD and FAIR automation
 ├── CITATION.cff            # FAIR: Machine-readable citation metadata
-├── codemeta.json           # FAIR: Comprehensive software metadata
+├── codemetadata.json           # FAIR: Comprehensive software metadata
 ├── DESCRIPTION             # R-standard metadata (dependencies)
-├── LICENSE                 # Open Science: e.g., MIT or Apache 2.0
+├── LICENSE                 # Open Science: MIT License
 ├── README.md               # Human-readable entry point
 └── renv.lock               # Reproducibility: R environment snapshot
 ```
@@ -110,23 +110,34 @@ export PATH="/c/Program Files/R/R-4.5.1/bin:$PATH"
 
 This PATH modification applies only to the current Git Bash session. Adjust the path if R is installed elsewhere.
 
-### 4. Install Required R Packages
+### 4. Restore R Package Dependencies
 
-Run the following command:
+This project uses `renv` to manage R package dependencies.
+
+Run the following command from the project root:
 
 ```bash
-Rscript -e 'install.packages(c("palmerpenguins", "ggplot2", "dplyr"), repos="https://cloud.r-project.org")'
+Rscript -e 'renv::restore()'
 ```
 
 ### 5. Run the Analysis
 
-From the repository root directory, execute:
+From the repository root directory, execute the modular scripts in the following order:
+
+```bash
+Rscript code/01_data_import.R
+Rscript code/02_preprocessing.R
+Rscript code/03_statistical_analysis.R
+Rscript code/04_visualization.R
+```
+
+The workflow imports the dataset, removes missing observations, performs linear regression, and generates figures.
+
+The original analysis script is retained as a reference baseline and can be executed separately:
 
 ```bash
 Rscript code/00_sample_analysis.R
 ```
-
-The script performs data preprocessing, linear regression, and visualization.
 
 ### 6. Expected Outputs
 
@@ -146,11 +157,16 @@ outputs/
 
 These outputs were successfully generated during the initial testing on Windows using R 4.5.1.
 
+The files listed above are the reference outputs from the original analysis.
+The modular workflow generates separate files using the `_modular` suffix.
+These modular outputs are excluded from Git tracking but can be reproduced
+by running the four scripts.
+
 ### 7. Reproducibility Status
 
 The analysis has been successfully executed on the development machine.
 
-Exact package-version management using `renv` is planned as the next development step. Reproduction on an independent machine or operating system has not yet been verified.
+Package versions are managed using renv and recorde in renv.lock.
 
 ## Requirements
 
@@ -215,7 +231,7 @@ The repository already includes a Zenodo DOI badge, but I still need to check wh
 
 The MIT License is intended for the original code developed in this repository. It allows other users to reuse, modify, and share the software under its license conditions.
 
-The repository already contains an MIT LICENSE file. However, some documentation still refers to CC-BY-4.0, so I need to make the license information consistent.
+The repository already contains an MIT LICENSE file. The repository documentation and metadata identify MIT as the software license.
 
 I also need to check the license and attribution requirements of the original training script and the University of Twente software template.
 
@@ -233,9 +249,8 @@ First, I use Git to record changes in the code. I also keep documentation so oth
 
 The code should be divided into smaller modules to make debugging and testing easier. Software dependencies and their versions should also be recorded.
 
-For R projects, I plan to use `renv` to manage package dependencies. I will also introduce automated tests to check that the analysis works correctly.
-
-For the Palmer Penguins project, I have already tested the original R script and documented how to run it. The next steps are to organize the code into smaller scripts, manage dependencies with `renv`, and add basic tests.
+For R projects, I plan to use `renv` to manage package dependencies.
+For the Palmer Penguins project, I have organized the original analysis into four modular scripts, recorded package dependencies using renv, and implemented basic automated proprocessing tests.
 
 ### 6. Software Support After Project Completion
 
@@ -319,7 +334,7 @@ The instructions explain how to install the required R packages, clone the GitHu
 
 I have tested the installation and analysis on my Windows laptop using R 4.5.1.
 
-I also plan to use `renv` to record package versions so other users can restore the R environment more easily.
+I use `renv` to record package versions so other users can restore the R environment more easily.
 
 ### 11. Software Citation
 
@@ -329,13 +344,15 @@ I also plan to use `renv` to record package versions so other users can restore 
 
 Software citation is important because it gives credit to the developers and helps other researchers find the software.
 
-I plan to use a `CITATION.cff` file to provide information such as the software title, author, version, and repository.
+I use a `CITATION.cff` file to provide information such as the software title, author, version, and repository.
 
 The Palmer Penguins repository already contains a citation file:
 
 [CITATION.cff](CITATION.cff)
 
-I still need to check the citation information and the Zenodo DOI before using them for a software release.
+The repository is archived on Zenodo with the all-versions DOI
+10.5281/zenodo.24104163. The existing version 1.0.0 will be
+followed by an updated release after the final documentation review.
 
 For other research projects, I would use a similar approach to make the software easier to cite.
 
@@ -349,11 +366,7 @@ Software testing is needed to check whether the code works correctly and produce
 
 For the Palmer Penguins project, I have successfully run the original R analysis script. It produced processed data, regression results, and figures.
 
-However, automated testing has not been implemented yet.
-
-I plan to add basic tests using the R package `testthat`. These tests will check data processing and selected analysis results.
-
-I also plan to compare the outputs from the modular scripts with the original analysis to make sure the results remain consistent.
+I have implemented a preprocessing test using testthat. The test includes five assertions to verify observation counts, missing values, and the cleaned dataset.
 
 ### 13. Software Packaging and Distribution
 
@@ -374,19 +387,19 @@ If the software becomes more complex or is intended for wider use, I may conside
 Stable versions may also be shared through GitHub releases and archived in Zenodo.
 
 ## License
-This software is distributed under a [CC-BY](LICENSE). 
+This software is distributed under a [MIT License](LICENSE).
 
 ## Copyright
 
-&copy; , The Netherlands. 
+&copy; 2026 Aris Suwondo.
 
 ## Citation
 
-[Include a [CCF file (Citaion File Format)](https://citation-file-format.github.io/). See example in this repo: `CITATION.cff`. You can easily create the content of a CCF using [this tool](https://citation-file-format.github.io/cff-initializer-javascript/). ]
+Software citation information is provided in [CITATION.cff](CITATION.cff).
 
-[CCF files can be converted to a multitude of formats, including BibTex,  EndNote, codemeta, plain JSON, schema.org, RIS, and Zenodo JSON ]
+Software metadata is available in [codemetadata.json](codemetadata.json).
 
 ## Acknowlegdements
 
 - [Best practices for sustainable software project, TDCC NES](https://github.com/SS-NES)
-- [Any other acknowlegdements]
+- The original analysis script and course materials were provided as part of the University of Twente Research Software Management training.

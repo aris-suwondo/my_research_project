@@ -28,8 +28,10 @@ Variable names and scales used in these figures correspond directly to the **Dat
 ---
 
 ## 📜 Licensing & Open Access
-Unless otherwise specified, all visual assets in this folder are licensed under:
-👉 **[CC-BY-4.0](https://creativecommons.org)**
+Unless otherwise specified, figures generated for this project are licensed under
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+
+The R source code is licensed separately under the MIT License.
 
 This allows for the reuse and redistribution of these figures in other research works, provided that the original software/repository is cited as per the `CITATION.cff` file.
 
@@ -38,8 +40,8 @@ This allows for the reuse and redistribution of these figures in other research 
 ## 🏷️ Automated Tracking
 To maintain **Findability**, figures are named using the following convention:
 `fig-[number]-[brief-description].[extension]`  
-Example: `fig-01-correlation-matrix.png`
+Example: `fig-01-penguin-regression.png`
 
 ---
-*Maintained by: [Your Name/ORCID]*  
-*Generated via R version [Insert Version] using [ggplot2/lattice/base].*
+*Maintained by: Aris Suwondo*
+*Generated using R 4.5.1 and ggplot2 4.0.1.*

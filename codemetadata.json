@@ -1,23 +1,21 @@
 {
-  "@context": "https://doi.org",
-  "@type": "SoftwareSourceCode",
-  "name": "Project Name",
-  "description": "A brief description of the research software and analysis.",
-  "codeRepository": "https://github.com",
-  "license": "https://spdx.org",
-  "version": "1.0.0",
+"@context": "https://w3id.org/codemeta/4.0",
+"@type": "SoftwareSourceCode",
+"name": "Palmer Penguins Regression Analysis",
+"description": "A modular R workflow for Palmer Penguins regression analysis, developed as part of the Research Software Management course at the University of Twente.",
+"codeRepository": "https://github.com/aris-suwondo/my_research_project",
+  "license": "https://spdx.org/licenses/MIT.html",
   "author": [
     {
       "@type": "Person",
-      "givenName": "Jane",
-      "familyName": "Doe",
-      "email": "j.doe@university.nl",
-      "affiliation": "Dutch Research University",
-      "identifier": "https://orcid.org"
+      "givenName": "Aris",
+      "familyName": "Suwondo",
+      "email": "aris.suwondo@utwente.nl",
+      "affiliation": "GSC-ITC, University of Twente"
     }
   ],
   "softwareRequirements": [
-    "R (>= 4.1.0)",
-    "tidyverse"
+    "R 4.5.1",
+    "R packages recorded in renv.lock"
   ]
 }

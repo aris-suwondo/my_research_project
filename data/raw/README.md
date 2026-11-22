@@ -11,7 +11,7 @@ Data in this folder must **never** be edited, renamed, or deleted. Any data clea
 *   **Origin:** [Insert Source Name, e.g., name of meteorologicla or statistical institues, or Lab Experiment]
 *   **Date Accessed:** YYYY-MM-DD
 *   **Persistent Identifier (DOI/URL):** [Link to original data source]
-*   **License:** [e.g., CC-BY-4.0]
+*   **License:** CC0 (Palmer Penguins dataset).
 
 ### 2. Accessibility
 List all data files that contains sensitive or private information or are too large for GitHub ( >50MB).
